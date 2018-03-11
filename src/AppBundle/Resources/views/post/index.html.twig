@@ -1,0 +1,8 @@
+{% extends ':default:layout.html.twig' %}
+{% block title %}
+    Home
+{% endblock %}
+{% block body %}
+    {% include '@App/post/postFilter.html.twig' %}
+    {% include '@App/post/postList.html.twig' %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends ':default:layout.html.twig' %}
+{% block title %}
+    Création
+{% endblock %}
+{% block body %}
+    {# todo faire la création #}
+    <form action="{{ path('app_admin_post_create') }}" method="post">
+        {% include '@App/post/form.html.twig' with 'form' => form %}
+    </form>
+{% endblock %}

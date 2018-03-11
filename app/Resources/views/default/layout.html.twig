@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto">
+
+    {% block stylesheets %}
+        {% stylesheets
+            '@bootstrap_css'
+            '@main_css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    {% endblock %}
+
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+
+    {% block javascripts %}
+        {% javascripts
+            '@jquery_js'
+            '@bootstrap_js'
+            '@main_js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+
+</body>
+</html>

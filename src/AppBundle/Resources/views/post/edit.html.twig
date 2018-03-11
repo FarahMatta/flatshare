@@ -1,0 +1,10 @@
+{% extends ':default:layout.html.twig' %}
+{% block title %}
+    Edition
+{% endblock %}
+{% block body %}
+    {# todo faire la modification #}
+    <form action="{{ path('app_admin_post_edit', {'id' : post.id }) }}" method="post">
+        {% include '@App/post/form.html.twig' with 'form' => form %}
+    </form>
+{% endblock %}
